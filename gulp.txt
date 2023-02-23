@@ -1,0 +1,60 @@
+Pentru a transforma in mod automat fisiere scss/sass/less in css folosim gulp
+1.Instalam  Node.js
+ https://nodejs.org/en/download/
+2. Verificam in command prompt
+node -v
+npm -v
+3. In proiectul curent
+npm init
+4. Instalam gulp
+npm install gulp -g
+5. Instalam modulele necesare
+npm install gulp-sass --save-dev
+npm install node-sass --save-dev
+
+5.1 Instalam modulele extinse
+Metoda 2 scss to css
+npm install postcss --save-dev
+npm install gulp-postcss --save-dev
+npm install autoprefixer --save-dev
+npm install cssnano --save-dev
+npm install gulp-sourcemaps --save-dev
+
+// suprascrie fisierele
+npm install gulp-replace --save-dev
+// din 2 sau mai multe fisiere face un singur fisier
+npm install gulp-concat --save-dev
+// redenumeste fisierul
+npm install gulp-rename --save-dev
+// optimizeaza imaginile
+npm install gulp-imagemin --save-dev
+// minimizeaza fisierele javascript
+ npm install gulp-terser --save-dev
+// sau gulp-minify
+// minimizeaza css
+npm install gulp-clean-css --save-dev
+
+6. facem un fisier 
+gulpfile.js
+7. in fisierul package.json adaugam la "scripts"
+"scripts": {
+   "scss": "gulp sass"
+},
+
+8. Rulam comanda
+npm run scss
+
+sau gulp sass  // gulp si nume task
+
+
+8.Optional pentru imagini
+//instalam http://www.graphicsmagick.org/download.html   si  https://imagemagick.org/script/download.php#macosx
+ apoi  verificam daca intalarea s-a facut cu success
+ convert --version
+ //https://stackabuse.com/working-with-images-in-node-js-graphicsmagick-and-imagemagick
+ //https://medium.com/@JohnAyeni/generating-responsive-images-with-gulp-30e9c5bcb5f0
+npm i  gulp-imagemin imagemin-mozjpeg gulp-image-resize  -s -D
+npm i --save-dev gulp-plumber
+
+
+https://www.heididev.com/gulp-error-watch-task-has-be-function
